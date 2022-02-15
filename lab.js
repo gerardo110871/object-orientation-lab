@@ -71,8 +71,10 @@ favoriteThings['show'] = 'HIMYM'
 */
 
 //Code here
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings['book'] = 'Harry Potter'
 
-
+// console.log(favoriteThings)
 //////////////////////////// PROBLEM 6 ////////////////////////////
 
 // Do not edit the code below.
