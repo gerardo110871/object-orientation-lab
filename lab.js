@@ -103,7 +103,7 @@ const {color, make, model, year} = carDetails
 */
 
 function greeting( obj ) {
-  
+
   //Code Here
   const { firstName, lastName, title} = obj
   // Do not edit the code below.
@@ -205,7 +205,18 @@ console.log(Meow.name)
 */
 
 //Code here
-
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
+} 
+const attack = new Wizard("Lord Voldemort", 25, "Abracadabra")
+attack.castSpell()
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
     Write a class called Phone. We'll use it as if we were creating
