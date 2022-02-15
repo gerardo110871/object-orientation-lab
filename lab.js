@@ -91,8 +91,7 @@ var carDetails = {
 */
 
 //Code Here
-
-
+// const {color, make, model, year} = Vehicle
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -104,13 +103,11 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const { firstName, lastName, title} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
-
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -123,8 +120,11 @@ function greeting( obj ) {
 */
 
 //Code Here
+function totalPopulation(land) {
 
-
+  const {utah, california, texas, arizona} = land
+  return utah + california + texas + arizona
+}
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -138,6 +138,11 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients(obj2) {
+  const {carb, fat, protein} = obj2
+  return [carb, fat, protein]
+
+}
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
@@ -159,8 +164,9 @@ var user = {
 */
 
 //Code Here
-
-
+user.name = 'Bryan G. Smith'
+user["email"] = 'bryan.smith@devmountain.in'
+// console.log(user)
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
   Using the user object above, delete the users age off of the object.
