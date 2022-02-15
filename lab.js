@@ -91,7 +91,8 @@ var carDetails = {
 */
 
 //Code Here
-// const {color, make, model, year} = Vehicle
+const {color, make, model, year} = carDetails
+// console.log(carDetails.color)
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -102,6 +103,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
+  
   //Code Here
   const { firstName, lastName, title} = obj
   // Do not edit the code below.
@@ -173,8 +175,8 @@ user["email"] = 'bryan.smith@devmountain.in'
 */
 
 //Code Here
-
-
+delete user.age
+console.log(user)
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
   Create a class called 'Cat'. Make sure to call your constructor, and require these 3 parameters: name, age, color.
@@ -183,7 +185,15 @@ user["email"] = 'bryan.smith@devmountain.in'
 */
 
 //Code here
-
+class Cat {
+  constructor(name, age, color){
+        this.name = name;
+        this.age = age;
+        this.color = color;
+  }
+}
+const Meow = new Cat("Meow", 2, "black")
+console.log(Meow.name)
 
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
