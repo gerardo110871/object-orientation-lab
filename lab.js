@@ -369,19 +369,18 @@ class Vehicle {
 
   move(miles) {
   this.mileage += miles
-  console.log(this.milage)
+  console.log(this.mileage)
   }
 }
-const newTruck = new Vehicle("1", "blue", 20000)
-// newTruck.move(700)
-// console.log(newTruck)
+
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
 
 //Code Here
+const myFirstVehicle = new Vehicle("1", "blue", 20000)
 
-
+myFirstVehicle.move(700)
 /* 
   Now we'll create a class that's based off of the vehicle class. 
 
@@ -391,16 +390,25 @@ const newTruck = new Vehicle("1", "blue", 20000)
 */
 
 //Code Here
+class Motorcycle extends Vehicle {
+  constructor(capacity, color, mileage, make, isCool){
+    super(capacity, color, mileage)
+      
+      this.make = make;
+      this.isCool = isCool;
+  }
 
+}
 /*
   Create a Motorcycle using your new class and save it to a variable called myFirstMotorcycle
 */
 
 //Code Here 
-
+const myFirstMotorcycle = new Motorcycle(2, "black", 1200, "Yamaha", true)
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
+  myFirstMotorcycle.move(70)
 
 /*
   Let's make another class based off of Vehicle. 
@@ -419,7 +427,29 @@ const newTruck = new Vehicle("1", "blue", 20000)
 */
 
 //Code Here
+class Boat extends Vehicle {
+  constructor(capacity, color, mileage, name, type, isSeaworthy) {
+          super(capacity, color, mileage)
 
+          this.name = name;
+          this.type = type;
+          this.isSeaworthy = isSeaworthy;
+  }
+    checkSeaworthiness(){
+
+      if (this.isSeaworthy) {
+      console.log(`The ${this.color} ${this.type} ${this.name} is seaworthy!`)
+    }  else {
+      console.log(`You need to get your ${this.type} in shape!`)
+    }
+      }
+
+      performMaintenance() {
+        this.isSeaworthy = true
+      }
+    }
+  
+  
 
 /*
   Create a new boat using your class. You can choose whatever values you like for all the 
@@ -427,21 +457,23 @@ const newTruck = new Vehicle("1", "blue", 20000)
 */
 
 //Code Here
-
+const myFirstBoat = new Boat(3, "white", 200, "malibu", "speed boat", false)
 /*
   Call the checkSeaworthiness method on your new boat
 */
 
 //Code Here
-
+myFirstBoat.checkSeaworthiness()
 /*
   Now run the performMaintenance method on your boat
 */
 
 //Code Here 
+myFirstBoat.performMaintenance()
 
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+myFirstBoat.checkSeaworthiness()
