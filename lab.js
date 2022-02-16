@@ -92,7 +92,7 @@ var carDetails = {
 
 //Code Here
 const {color, make, model, year} = carDetails
-// console.log(carDetails.color)
+console.log(carDetails.color)
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
@@ -241,8 +241,25 @@ attack.castSpell()
 */
 
 //Code Here
-
+class Phone {
+  constructor(brand, model, storage,color, price){
+      this.brand = brand;
+      this.model = model;
+      this.store = storage;
+      this.price = price;
+      this.sold = false;
+  }
+  sell() {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+  changePrice(newPrice) {
+    this.object = newPrice;
+    console.log(newPrice)
+  }
+}
   
+
 /*
     Next make three new phone instances using your class.
     Send in values of your choice. They should match these data types:
@@ -254,7 +271,11 @@ attack.castSpell()
 */
 
 //Code Here
+const iphone = new Phone("apple", "x", "12gb","graphite", 1200)
+const Samsung = new Phone("Samsung", "galaxy", "12 gb","black",1200)
+const google = new Phone("Google", "Pixel","10gb","graphite", 800)
 
+iphone.sell()
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -263,7 +284,7 @@ attack.castSpell()
 */ 
 
 //Code Here 
-
+iphone.changePrice(800)
 
 /*
   Now call the sell method on one of your other phone objects
@@ -272,7 +293,8 @@ attack.castSpell()
 */
 
 //Code Here 
-
+Samsung.sell()
+console.log(Samsung.sold)
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
@@ -292,7 +314,8 @@ const colors = {
 
 //Code Here 
 
-
+const colorsCopy = {...colors}
+console.log(colorsCopy)
 
 /*
  Now use the spread operator to combine the following 2 objects into one. 
