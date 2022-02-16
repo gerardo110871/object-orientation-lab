@@ -360,8 +360,21 @@ console.log(helesInfo)
 */
 
 //Code Here 
+class Vehicle {
+  constructor(capacity, color, mileage){
+    this.capacity = capacity;
+    this.color = color;
+    this.mileage = mileage
+}
 
-
+  move(miles) {
+  this.mileage += miles
+  console.log(this.milage)
+  }
+}
+const newTruck = new Vehicle("1", "blue", 20000)
+// newTruck.move(700)
+// console.log(newTruck)
 /*
   Create a vehicle using your new class and save it to a variable called myFirstVehicle
 */
